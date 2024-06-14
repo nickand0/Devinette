@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devinette</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</head>
+<body class="flex justify-center bg-gray-100">
+    <div class="border mt-52 py-8 px-20 rounded-xl bg-white">
+        <h1 class="text-center font-bold text-4xl mb-5 ">Jeu de devinette</h1>
+        <p  class="font-bold mb-3 text-center">Devinez un nombre entre 1 et 100</p>
+        <p id="return" class="text-center text-gray-300 mb-3"></p>
+
+        <div id="champ-button" class="flex justify-center">
+            <input id="myInput" type="text" required class="border border-blue-600 rounded-l-full py-2 text-center">
+            <button class="px-5 border border-blue-600 rounded-r-full bg-blue-600 font-bold text-white">go</button>
+        </div>
+        <div id="divRestart" class="flex justify-center mt-2 hidden">
+            <button id="restart" class="px-16 py-3 border border-blue-600 rounded-r-full rounded-l-full bg-blue-600 font-bold text-white">Recommencer</button>
+        </div>
+    </div>
+    
+</body>
+</html>
