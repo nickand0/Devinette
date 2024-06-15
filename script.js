@@ -5,6 +5,8 @@
     var champButton = document.getElementById('champ-button');
     let buttonRestart = document.getElementById('restart');
     let divrestart = document.getElementById('divRestart');
+    let buttonRejouer = document.getElementById('rejouer');
+    let divrejouer = document.getElementById('divRejouer');
 
     let clickcount =0;
     let maxClick=5;
@@ -23,6 +25,7 @@
     buttonRestart.addEventListener('click',function(){
             champButton.style.display='flex';
             divrestart.style.display='none';
+            divrejouer.style.display='none';
             textRetour.textContent ="";
             clickcount = 0;
             valeur.value = '';
@@ -30,6 +33,19 @@
             randomNumber= Nb();
            
     })
+
+    // bouton pour rejouer
+    buttonRejouer.addEventListener('click',function(){
+        champButton.style.display='flex';
+        divrejouer.style.display='none';
+        textRetour.textContent ="";
+        clickcount = 0;
+        valeur.value = '';
+        button.textContent = 'Go';
+        randomNumber= Nb();
+       
+})
+
 //fonction nombre a deviner
 function Nb (){
     const chiffre = '0123456789';
@@ -62,8 +78,9 @@ let randomNumber = Nb();
                 textRetour.textContent="Bravo ,Vous avez Réussi !🎉";
                 textRetour.style.color='green';
                 valeur.value = '';
-                champButton.removeChild(button);
-                champButton.removeChild(valeur);
+                champButton.style.display='none';
+                divrejouer.style.display='flex';
+                
                 
             }else if(nombre < randomNumber){
                 textRetour.textContent = `le nombre est supérieur à ${nombre}`
